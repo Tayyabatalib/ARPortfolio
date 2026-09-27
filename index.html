@@ -3,413 +3,1362 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Akif Rahim | Hydro-Climatologist &amp; Flood–Drought Modeler</title>
+  <title>Dr. Akif Rahim | Hydro-Climatologist & Flood–Drought Modeler</title>
   <meta name="description" content="Dr. Akif Rahim — PhD Hydro-Climatologist specializing in flash droughts, flood forecasting, climate downscaling, AI/ML for hydrology, and the WEFE Nexus across the Indus Basin and beyond." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230B1C38'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='%2322D3EE' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --dark: #1a1a2e;
+      --darker: #0f0f1a;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --light: #f8f9fa;
+      --white: #ffffff;
+      --border: #e9ecef;
+      --radius: 8px;
+      --skill-bar: #1e3a5f;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--primary-dark); text-decoration: underline; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--primary); text-decoration: none; }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-icons a {
+      color: var(--text-muted);
+      display: flex;
+    }
+    .header-icons a:hover { color: var(--primary); }
+    .header-icons svg { width: 20px; height: 20px; }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--dark);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 60%, #334155 100%);
+      color: var(--white);
+      padding: 80px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%230f172a" fill-opacity="0.4" d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,144C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat bottom;
+      background-size: cover;
+      opacity: 0.6;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 60px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-photo-wrap { text-align: center; }
+
+    .hero-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.2);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+      background: #334155;
+    }
+
+    .hero-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 4px;
+    }
+
+    .hero-affil {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .hero-social {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .hero-social a {
+      color: rgba(255,255,255,0.7);
+      display: flex;
+    }
+    .hero-social a:hover { color: #93c5fd; }
+    .hero-social svg { width: 22px; height: 22px; }
+
+    .hero-about h2 {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .hero-about p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 16px;
+      font-size: 1.02rem;
+    }
+
+    .hero-about a { color: #93c5fd; }
+
+    /* ========== EXPERTISE + EDUCATION ========== */
+    .about-meta {
+      background: var(--darker);
+      color: var(--white);
+      padding: 50px 0 60px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .meta-grid h3 {
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .expertise-list { list-style: none; }
+    .expertise-list li {
+      padding: 6px 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      position: relative;
+      padding-left: 18px;
+    }
+    .expertise-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #60a5fa;
+    }
+
+    .edu-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .edu-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(96,165,250,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #93c5fd;
+      font-size: 14px;
+    }
+    .edu-body strong {
+      display: block;
+      color: rgba(255,255,255,0.95);
+      font-size: 0.98rem;
+    }
+    .edu-body span {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* ========== SECTIONS ========== */
+    .section { padding: 70px 0; }
+    .section-light { background: var(--light); }
+
+    .section-title {
+      font-size: 1.85rem;
+      margin-bottom: 40px;
+      color: var(--dark);
+    }
+
+    .subsection-title {
+      font-size: 1.25rem;
+      margin: 40px 0 20px;
+      color: var(--dark);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+    .subsection-title:first-of-type { margin-top: 0; }
+
+    /* ========== SKILLS ========== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 50px;
+    }
+
+    .skill-item { margin-bottom: 4px; }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .skill-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .skill-years {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .skill-bar-bg {
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: var(--skill-bar);
+      border-radius: 4px;
+    }
+
+   /* ========== WORK EXPERIENCE ACCORDION ========== */
+.exp-item {
+  margin-bottom: 12px;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.exp-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  padding: 18px 0;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.exp-header:hover {
+  opacity: 0.9;
+}
+
+.exp-header-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-chevron {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+  margin-left: 12px;
+}
+
+.exp-item.open .exp-chevron {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.exp-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0;
+}
+
+.exp-item.open .exp-body {
+  max-height: 600px; /* enough for the longest entry */
+  padding-bottom: 22px;
+}
+
+.exp-location {
+  margin-bottom: 12px;
+}
+
+    /* ========== AWARDS ========== */
+    .award-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .award-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: box-shadow 0.2s;
+    }
+    .award-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .award-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .award-org {
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .award-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== RESEARCH ========== */
+    .research-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    .research-item:nth-child(even) { direction: rtl; }
+    .research-item:nth-child(even) > * { direction: ltr; }
+
+    .research-visual {
+      background: var(--light);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+    }
+    .research-placeholder {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0369a1;
+      font-size: 2.5rem;
+    }
+
+    .research-body h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+    .research-body p {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .tag {
+      font-size: 0.78rem;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* ========== PUBLICATIONS ========== */
+    .pub-item {
+      display: flex;
+      gap: 24px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pub-item:last-child { border-bottom: none; }
+
+    .pub-year {
+      flex-shrink: 0;
+      width: 60px;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    .pub-body h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+    .pub-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .pub-meta i { font-style: italic; }
+
+    .q-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+    .q1 { background: #dcfce7; color: #166534; }
+    .q2 { background: #e0f2fe; color: #0369a1; }
+
+    /* ========== TRAININGS & CONFERENCES ========== */
+    .timeline-list { list-style: none; }
+
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+
+    .timeline-date {
+      flex-shrink: 0;
+      width: 140px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .timeline-body { flex: 1; }
+    .timeline-body strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+    .timeline-body span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== CTA ========== */
+    .cta {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 70px 0;
+    }
+    .cta h2 {
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+    }
+    .cta p {
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn svg { width: 18px; height: 18px; }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      margin-left: 12px;
+    }
+    .btn-outline:hover {
+      border-color: var(--white);
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--darker);
+      color: rgba(255,255,255,0.6);
+      padding: 40px 0 24px;
+      font-size: 0.9rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      margin-left: 20px;
+      font-size: 0.88rem;
+    }
+    .footer-links a:hover { color: #93c5fd; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+      .hero-photo { margin: 0 auto 20px; }
+      .meta-grid { grid-template-columns: 1fr; gap: 40px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .award-grid { grid-template-columns: 1fr; }
+      .research-item,
+      .research-item:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .timeline-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .timeline-date { width: auto; }
+      .exp-header { flex-direction: column; }
+    }
+
+    @media (max-width: 700px) {
+      .site-nav { display: none; }
+      .nav-toggle { display: flex; }
+      .site-nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        gap: 16px;
+      }
+      .header-icons { display: none; }
+      .pub-item { flex-direction: column; gap: 6px; }
+    }
+
+    /* Dark Contact Section Style */
+.contact-section {
+  background: #1e222d; /* Dark theme matching screenshot */
+  color: #ffffff;
+  padding: 70px 0;
+  border-top: 1px solid #2d3245;
+}
+.contact-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 120px;
+}
+.contact-heading h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+.contact-row svg {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.contact-row a {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-row a:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* Sticky Header Offset Fix */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Tamara Header ni height pramane adjust karo */
+}
+
+@media (max-width: 768px) {
+  .contact-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+  </style>
 </head>
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Dr. Akif Rahim — Home">
-        <span class="brand-text">
-          <span class="brand-name">Dr. Akif Rahim</span>
-          <span class="brand-sub">Hydro-Climatologist · PhD</span>
-        </span>
-      </a>
-      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a class="brand" href="index.html">Dr. Akif Rahim</a>
+      <nav class="site-nav" id="siteNav">
         <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#publications">Publications</a>
         <a class="nav-link" href="experience.html">Experience</a>
-        <a class="nav-link" href="projects.html">Projects</a>
-        <a class="nav-link" href="publications.html">Publications</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-        <a class="btn btn-accent btn-sm nav-cv" href="mailto:ak.rahim001@gmail.com?subject=Request%20CV%20%E2%80%94%20Dr.%20Akif%20Rahim">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Request CV
-        </a>
+        <!-- <a class="nav-link" href="#skills">Skills</a> -->
+        <a class="nav-link" href="research.html">Research</a>
+        <!-- <a href="research.html">Research & Portfolio</a> -->
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link" href="trainings.html">Trainings</a>
+        <!-- <a class="nav-link" href="#publications">Publications</a> -->
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <div class="header-icons">
+        <a href="mailto:ak.rahim001@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5v6"/><path d="M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <main>
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="hero-bg-grid" aria-hidden="true"></div>
-      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-
+    <!-- HERO / ABOUT ME -->
+    <section class="hero" id="about">
       <div class="container hero-inner">
-        <div class="hero-copy">
-          <span class="hero-eyebrow">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            Expertise in <span class="rotator" data-rotator="Climate Resilience|Flash Droughts|Flood Forecasting|Water Security">Climate Resilience</span>
-          </span>
-          <h1>Hydro-Climatologist &amp;<br /><span class="accent-cyan">Flood &amp; Drought Modeler</span></h1>
-          <div class="hero-chips">
-            <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2s7 7.6 7 12a7 7 0 1 1-14 0c0-4.4 7-12 7-12z"/></svg>Flash Droughts</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>Flood Forecasting</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>Climate Downscaling</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>AI / ML for Hydrology</span>
-          </div>
-          <blockquote class="hero-quote">“My mission is razor-sharp: predict extremes early, plan water wisely, and build climate resilience where it matters most.”</blockquote>
-          <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="experience.html">View Experience
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="assets/img/akif-rahim.png" alt="Dr. Akif Rahim" width="220" height="220"
+               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Crect fill=%22%23334155%22 width=%22220%22 height=%22220%22/%3E%3Ctext x=%22110%22 y=%22120%22 fill=%22%2393c5fd%22 font-size=%2240%22 text-anchor=%22middle%22 font-family=%22Arial%22%3EAR%3C/text%3E%3C/svg%3E'" />
+          <div class="hero-name">Dr. Akif Rahim</div>
+          <div class="hero-title">Hydro-Climatologist · PhD</div>
+          <div class="hero-affil">Flood &amp; Drought Modeler</div>
+          <div class="hero-social">
+            <a href="mailto:ak.rahim001@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             </a>
-            <a class="btn btn-ghost-light" href="projects.html">View Projects</a>
-            <a class="btn btn-link" href="contact.html">Contact Me
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <a href="assets/cv/CV_Akif_Rahim.pdf" download="Akif_Rahim_CV.pdf" aria-label="Download CV" title="Download CV">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=DB9Dlp8AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5v6"/><path d="M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
+            </a>
+            <a href="tel:+923218561374" aria-label="Phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="portrait-glow" aria-hidden="true"></div>
-          <div class="hero-photo-wrap" data-parallax>
-            <figure class="hero-photo">
-              <img src="assets/img/akif-rahim.png" alt="Dr. Akif Rahim — Hydro-Climatologist and Flood &amp; Drought Modeler" width="554" height="554" decoding="async" />
-            </figure>
-            <div class="hero-photo-badge">
-              <span class="hpb-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2s7 7.6 7 12a7 7 0 1 1-14 0c0-4.4 7-12 7-12z"/></svg></span>
-              <span class="hpb-text"><b>Specialization</b><i>Hydroclimatic Modeling</i></span>
+        <div class="hero-about">
+          <h2>About Me</h2>
+          <p>
+            As a seasoned <strong>Hydro-Climate Data Scientist</strong>, I specialize in climate extremes, hydrological modeling, ecosystem impacts, and climate-change assessment. I am proficient in Python and R for hydrological simulation, runoff generation and routing, drought and flood assessment, and regional climate-impact modeling using mathematical, numerical, and computational methods.
+          </p>
+          <p>
+            I have hands-on experience with top-tier hydrological models — <strong>VIC, HEC-HMS, and CLIMADA</strong> — and advanced AI/ML applications in hydrology and climate science. I developed <strong>PakDMS</strong>, an operational drought monitoring and decision-support system for the Pakistan Meteorological Department, and contributed to the Pakistan Water Body Inventory.
+          </p>
+          <p>
+            I collaborated with <strong>Google Asia-Pacific</strong> to develop an AI-driven reservoir-operation and flood-forecasting system, currently operational with the Punjab Irrigation Department. I also served as a visiting researcher at the <strong>Japan Meteorological Research Institute (MRI)</strong>, contributing to the development of 5 km × 5 km high-resolution climate projections for the Indus Basin.
+          </p>
+          <p>
+            I taught courses in <em>Exploratory Data Analysis</em> and <em>Environmental Data Presentation</em> to M.Sc. students at the Czech University of Life Sciences Prague.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE + EDUCATION -->
+    <section class="about-meta">
+      <div class="container meta-grid">
+        <div>
+          <h3>Expertise</h3>
+          <ul class="expertise-list">
+            <li>Application of Artificial Intelligence and Machine Learning in Hydrological Modeling</li>
+            <li>Application of Remote Sensing and GIS in Hydro-climatology Analysis</li>
+            <li>Climate Change Adaptation and Mitigation Policy</li>
+            <li>Sustainability and Environmental Impact Studies</li>
+            <li>1D and 2D River Morphological Analysis</li>
+            <li>Climate Change Impact on the Ecosystem</li>
+            <li>Climate Change and Urban Water Management</li>
+            <li>Water–Energy–Food–Ecosystem (WEFE) Nexus</li>
+            <li>Statistical Approaches for Hydrological Analysis</li>
+            <li>Flood Risk and Vulnerability Analysis</li>
+            <li>Design and Implementation of Decision Support Systems for Water Resource Management</li>
+            <li>Academic and Report Writing</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <strong>PhD in Environmental Modelling</strong>
+              <span>Czech University of Life Sciences, Prague, 2024</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <strong>M.Phil. in Applied Hydrology</strong>
+              <span>University of the Punjab, Lahore, 2013</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <strong>M.Sc. in Applied Hydrology</strong>
+              <span>University of the Punjab, Lahore, 2008</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <strong>M.Sc. in Applied Physics</strong>
+              <span>University of Engineering and Technology (UET), Lahore, 2007</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <strong>Postgraduate Diploma in GIS &amp; Remote Sensing</strong>
+              <span>PIMS, Lahore, 2010</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <strong>B.Sc. (Mathematics, Physics, Statistics)</strong>
+              <span>University of the Punjab, Lahore, 2005</span>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="hero-wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
-          <path fill="rgba(6,15,31,0.5)" d="M0,44 C220,92 430,4 700,30 C980,56 1180,14 1440,52 L1440,110 L0,110 Z"/>
-          <path fill="#060f1f" d="M0,66 C240,104 470,30 720,50 C985,71 1200,36 1440,70 L1440,110 L0,110 Z"/>
-        </svg>
-      </div>
     </section>
 
-    <!-- ================= STAT BAND ================= -->
-    <section class="stat-band" id="stats" aria-label="Career statistics">
-      <div class="container stat-grid">
-        <div class="stat reveal">
-          <div class="stat-num"><span data-count="15" data-suffix="+">0+</span></div>
-          <div class="stat-label">Years of Expertise</div>
-        </div>
-        <div class="stat reveal reveal-d1">
-          <div class="stat-num"><span data-count="20" data-suffix="+">0+</span></div>
-          <div class="stat-label">Publications &amp; Presentations</div>
-        </div>
-        <div class="stat reveal reveal-d2">
-          <div class="stat-num"><span data-count="2">0</span></div>
-          <div class="stat-label">National Systems in Operation</div>
-        </div>
-        <div class="stat stat-degree reveal reveal-d3">
-          <div class="stat-num">PhD</div>
-          <div class="stat-label">Environmental Modelling</div>
-          <div class="stat-sub">Czech University of Life Sciences, Prague</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= INSTITUTIONS MARQUEE ================= -->
-    <section class="marquee-section" aria-label="Institutions and partners">
-      <p class="marquee-title">Trusted by Global Institutions — Partnerships &amp; Collaborations</p>
-      <div class="marquee">
-        <div class="marquee-track">
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>IWMI</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>CGIAR</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-13V5l-8-3-8 3v4c0 5.5 3 10 8 13z"/></svg>Punjab Irrigation Dept.</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Google Asia-Pacific</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6.5 6.5 0 0 0-12.7 1.7A4 4 0 0 0 6 19h11.5z"/></svg>MRI Japan (JMA)</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5v6M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>CZU Prague</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>FAO</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-13V5l-8-3-8 3v4c0 5.5 3 10 8 13z"/></svg>FCDO — UK Aid</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>GIZ &amp; UNU</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>EGU — Vienna</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Mott MacDonald</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5v6M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>University of the Punjab</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6.5 6.5 0 0 0-12.7 1.7A4 4 0 0 0 6 19h11.5z"/></svg>Hirosaki University</span>
-          <span class="org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>UNESCO</span>
-          <!-- duplicate for seamless loop -->
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>IWMI</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>CGIAR</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-13V5l-8-3-8 3v4c0 5.5 3 10 8 13z"/></svg>Punjab Irrigation Dept.</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Google Asia-Pacific</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6.5 6.5 0 0 0-12.7 1.7A4 4 0 0 0 6 19h11.5z"/></svg>MRI Japan (JMA)</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5v6M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>CZU Prague</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>FAO</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-13V5l-8-3-8 3v4c0 5.5 3 10 8 13z"/></svg>FCDO — UK Aid</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>GIZ &amp; UNU</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>EGU — Vienna</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Mott MacDonald</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5v6M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>University of the Punjab</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6.5 6.5 0 0 0-12.7 1.7A4 4 0 0 0 6 19h11.5z"/></svg>Hirosaki University</span>
-          <span class="org" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>UNESCO</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT PREVIEW ================= -->
-    <section class="section">
-      <div class="container split">
-        <div class="about-visual reveal">
-          <div class="portrait-card card-dark" style="background: var(--grad-navy);">
-            <div class="portrait-ring"><img class="portrait-photo" src="assets/img/akif-rahim.png" alt="Dr. Akif Rahim — Hydro-Climatologist and Flood &amp; Drought Modeler" width="554" height="554" decoding="async" /></div>
-            <div class="portrait-name">Dr. Akif Rahim</div>
-            <div class="portrait-role">Hydro-Climatologist · PhD</div>
-            <div class="portrait-badge">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2s7 7.6 7 12a7 7 0 1 1-14 0c0-4.4 7-12 7-12z"/></svg>
-              Water · Climate · Data Science
-            </div>
-            <div class="portrait-stats">
-              <div><div class="pstat-num">PhD</div><div class="pstat-label">CZU Prague</div></div>
-              <div><div class="pstat-num">15+</div><div class="pstat-label">Years</div></div>
-              <div><div class="pstat-num">5</div><div class="pstat-label">Degrees</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="about-body reveal reveal-d1">
-          <span class="eyebrow">15+ Years of Scientific Impact</span>
-          <h2>Bridging Climate Science with <span class="accent">Water Security</span></h2>
-          <p>Dr. Akif Rahim is a seasoned <strong>Hydro-Climate Data Scientist</strong> specializing in climate extremes, hydrological modeling, ecosystem impacts, and climate-change assessment. He is proficient in Python and R for hydrological simulation, runoff generation and routing, drought and flood assessment, and regional climate-impact modeling.</p>
-          <p>He has hands-on experience with top-tier hydrological models — <strong>VIC, HEC-HMS, and CLIMADA</strong> — and advanced AI/ML applications in hydrology and climate science. He developed <strong>PakDMS</strong>, an operational drought monitoring and decision-support system, contributed to the <strong>Pakistan Water Body Inventory</strong>, and collaborated with <strong>Google Asia-Pacific</strong> on an AI-driven reservoir-operation and flood-forecasting system now operational with the Punjab Irrigation Department.</p>
-          <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:10px;">
-            <a class="btn btn-primary" href="about.html">More About Me
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="publications.html">Google Scholar Profile</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SPECIALIZATIONS ================= -->
-    <section class="section section-dark">
+    <!-- SKILLS -->
+    <section class="section section-light" id="skills">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow eyebrow-light">Core Specialization</span>
-          <h2>Where Data Science Meets <span class="accent-cyan">Water &amp; Climate</span></h2>
-          <p>Six domains where analysis turns into early warnings, resilient infrastructure, and smarter water management.</p>
-        </div>
-        <div class="slider" data-slider>
-          <div class="slider-viewport" data-slider-viewport>
-          <div class="card card-dark slider-card reveal">
-            <div class="card-icon" style="background:rgba(34,211,238,.12); border-color:rgba(34,211,238,.3); color:var(--cyan-soft);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Surface Water Hydrological Modeling (HEC-RAS, HEC-HMS)</span>
+              <span class="skill-years">6+ yrs.</span>
             </div>
-            <h3>AI &amp; Machine Learning in Hydrology</h3>
-            <p>Artificial intelligence and ML for hydrological modeling — from ANN sediment-runoff models to AI surrogate calibration of the VIC model and AI-driven reservoir operations built with Google Asia-Pacific.</p>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div>
           </div>
-          <div class="card card-dark slider-card reveal reveal-d1">
-            <div class="card-icon" style="background:rgba(34,211,238,.12); border-color:rgba(34,211,238,.3); color:var(--cyan-soft);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">R and Python Programming</span>
+              <span class="skill-years">4+ yrs.</span>
             </div>
-            <h3>Flood Forecasting &amp; Risk Analysis</h3>
-            <p>River-flow forecasting across Indus Basin rim stations, SAR-based flood-depth estimation, flood-inundation mapping, and routing models — the work behind life-saving forecasts in 2023 and 2025.</p>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div>
           </div>
-          <div class="card card-dark slider-card reveal reveal-d2">
-            <div class="card-icon" style="background:rgba(34,211,238,.12); border-color:rgba(34,211,238,.3); color:var(--cyan-soft);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M19.1 4.9l-2.2 2.2M7.1 16.9l-2.2 2.2"/></svg>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Remote Sensing / GIS</span>
+              <span class="skill-years">6+ yrs.</span>
             </div>
-            <h3>Flash Droughts &amp; Ecosystem Response</h3>
-            <p>PhD research unraveling rapid-onset droughts across Central Europe — ecosystem resistance, resilience, and the space–time dynamics of flash drought propagation.</p>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div>
           </div>
-          <div class="card card-dark slider-card reveal">
-            <div class="card-icon" style="background:rgba(34,211,238,.12); border-color:rgba(34,211,238,.3); color:var(--cyan-soft);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Climate Data Analysis</span>
+              <span class="skill-years">5+ yrs.</span>
             </div>
-            <h3>Climate Downscaling &amp; Adaptation</h3>
-            <p>Non-hydrostatic dynamic downscaling (NHRCM) producing 5 km × 5 km climate projections for the Indus Basin with Japan's Meteorological Research Institute — assessing future water availability.</p>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
           </div>
-          <div class="card card-dark slider-card reveal reveal-d1">
-            <div class="card-icon" style="background:rgba(34,211,238,.12); border-color:rgba(34,211,238,.3); color:var(--cyan-soft);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-13V5l-8-3-8 3v4c0 5.5 3 10 8 13z"/></svg>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Big Data / Data Science</span>
+              <span class="skill-years">2+ yrs.</span>
             </div>
-            <h3>WEFE Nexus</h3>
-            <p>Water–Energy–Food–Ecosystem integration under the CGIAR Nexus Gains Initiative — linking downscaled climate projections with hydro-economic models for Indus Basin planning.</p>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:40%"></div></div>
           </div>
-          <div class="card card-dark slider-card reveal reveal-d2">
-            <div class="card-icon" style="background:rgba(34,211,238,.12); border-color:rgba(34,211,238,.3); color:var(--cyan-soft);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Groundwater Modeling / Quality Analysis</span>
+              <span class="skill-years">2+ yrs.</span>
             </div>
-            <h3>Decision Support Systems</h3>
-            <p>Designing operational tools that put science in decision-makers' hands — PakDMS for national drought monitoring and the Pakistan Water Bodies Inventory, both live today.</p>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:40%"></div></div>
           </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Sustainability Analysis</span>
+              <span class="skill-years">3+ yrs.</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:55%"></div></div>
           </div>
-          <div class="slider-controls">
-            <button class="slider-btn" type="button" data-slider-prev aria-label="Previous specializations">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-            </button>
-            <div class="slider-dots" data-slider-dots></div>
-            <button class="slider-btn" type="button" data-slider-next aria-label="Next specializations">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Cloud Computing</span>
+              <span class="skill-years">1+ yrs.</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:25%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Data Visualization</span>
+              <span class="skill-years">3+ yrs.</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:55%"></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= FEATURED PROJECTS ================= -->
-    <section class="section">
+    <!-- RESEARCH & PORTFOLIO
+    <section class="section" id="research">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Flagship Work</span>
-          <h2>Systems That Are <span class="accent">Live Today</span></h2>
-          <p>From national drought monitoring to AI reservoir operations — operational tools delivering value every day.</p>
-        </div>
-        <div class="proj-featured">
-          <article class="card proj-card reveal">
-            <div class="card-top">
-              <span class="pill pill-operational">● Operational</span>
-              <div class="proj-metric"><span class="pm-num">Nationwide</span><span class="pm-label">Coverage</span></div>
-            </div>
+        <h2 class="section-title">Research &amp; Portfolio</h2>
+        <article class="research-item">
+          <div class="research-visual"><div class="research-placeholder">💧</div></div>
+          <div class="research-body">
             <h3>PakDMS — Pakistan Drought Monitoring &amp; Decision Support System</h3>
             <p>Designed and developed the drought-forecasting module of PakDMS for the Pakistan Meteorological Department, using the VIC hydrological model with AI-based surrogate modeling for efficient calibration — operational under an FCDO (UK) funded project.</p>
+            <p><a href="https://pakdms.iwmi.org" target="_blank" rel="noopener">Visit pakdms.iwmi.org →</a></p>
             <div class="tags"><span class="tag">VIC Model</span><span class="tag">AI Surrogates</span><span class="tag">Drought Indices</span><span class="tag">Early Warning</span></div>
-            <a class="proj-link" href="https://pakdms.iwmi.org" target="_blank" rel="noopener">Visit pakdms.iwmi.org
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </article>
-          <article class="card proj-card reveal reveal-d1">
-            <div class="card-top">
-              <span class="pill pill-operational">● Operational</span>
-              <div class="proj-metric"><span class="pm-num">AI</span><span class="pm-label">With Google</span></div>
-            </div>
+          </div>
+        </article>
+        <article class="research-item">
+          <div class="research-visual"><div class="research-placeholder">🌊</div></div>
+          <div class="research-body">
             <h3>AI-Driven Reservoir Operation &amp; Flood Forecasting</h3>
             <p>Collaborated with Google Asia-Pacific to develop an AI-driven reservoir-operation and flood-forecasting system — currently operational with the Punjab Irrigation Department, supporting barrage operations during flood events.</p>
             <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Reservoir Ops</span><span class="tag">Flood Forecasting</span><span class="tag">Google</span></div>
-            <a class="proj-link" href="projects.html">Explore all projects
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
+          </div>
+        </article>
+        <article class="research-item">
+          <div class="research-visual"><div class="research-placeholder">☀️</div></div>
+          <div class="research-body">
+            <h3>Flash Droughts &amp; Ecosystem Response</h3>
+            <p>PhD research unraveling rapid-onset droughts across Central Europe — ecosystem resistance, resilience, and the space–time dynamics of flash drought propagation.</p>
+            <div class="tags"><span class="tag">Flash Droughts</span><span class="tag">Ecosystem Resilience</span><span class="tag">Central Europe</span></div>
+          </div>
+        </article>
+        <article class="research-item">
+          <div class="research-visual"><div class="research-placeholder">🛰️</div></div>
+          <div class="research-body">
+            <h3>Climate Downscaling &amp; WEFE Nexus</h3>
+            <p>Non-hydrostatic dynamic downscaling (NHRCM) producing 5 km × 5 km climate projections for the Indus Basin with Japan’s Meteorological Research Institute. Water–Energy–Food–Ecosystem integration under the CGIAR Nexus Gains Initiative.</p>
+            <div class="tags"><span class="tag">NHRCM</span><span class="tag">Indus Basin</span><span class="tag">WEFE Nexus</span><span class="tag">CGIAR</span></div>
+          </div>
+        </article>
+      </div>
+    </section> -->
+
+    <!-- AWARDS & SCHOLARSHIPS
+    <section class="section section-light" id="awards">
+      <div class="container">
+        <h2 class="section-title">Awards &amp; Scholarships</h2>
+        <div class="award-grid">
+
+          <div class="award-card">
+            <div class="award-title">Letter of Appreciation</div>
+            <div class="award-org">Government of the Punjab Irrigation Department, Pakistan</div>
+            <div class="award-meta">In recognition of dedicated services and timely flood forecasts during the 2025 and 2023 events, which significantly contributed to safeguarding lives and critical infrastructure.</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">Award for Publication Output (1st Decile, Web of Science)</div>
+            <div class="award-org">Czech University of Life Sciences, Prague</div>
+            <div class="award-meta">2023 · Paper: “Review of GPM IMERG performance: A global perspective”</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">Special Grant for PhD Research</div>
+            <div class="award-org">Czech University of Life Sciences, Prague</div>
+            <div class="award-meta">2019–2022 · 17,000 Euros · 3 years</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">IGA Project: Response of Ecosystem to Flash Drought Across Central Europe</div>
+            <div class="award-org">Internal Grant Agency (Project No. 2021B0020), CZU Prague</div>
+            <div class="award-meta">2020–2021 · 6,000 Euros · 1 year</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">Non-Hydrostatic Dynamic Downscale Climate Projection for Indus Basin</div>
+            <div class="award-org">Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan</div>
+            <div class="award-meta">2023 · 1 Million JPY · 2 months</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">Young Researcher Award (Travel &amp; Fee)</div>
+            <div class="award-org">European Geosciences Union (EGU), Vienna, Austria</div>
+            <div class="award-meta">2023 · 200 Euros</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">Best Paper Presentation Award</div>
+            <div class="award-org">Center of RS and Climate Change, University of the Punjab</div>
+            <div class="award-meta">“Leveraging of Remote Sensing and AI-Algorithm for Reservoir Operation”</div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">Generation of APHRODITE High-Resolution Gridded Data for Pakistan</div>
+            <div class="award-org">Hirosaki University, Japan</div>
+            <div class="award-meta">2018 · 0.5 Million JPY · 1 month</div>
+          </div>
+
         </div>
-        <div style="text-align:center;">
-          <a class="btn btn-ghost" href="projects.html">View All Projects</a>
+      </div>
+    </section> -->
+
+    <!-- TRAININGS & CONFERENCES
+    <section class="section" id="trainings">
+      <div class="container">
+        <h2 class="section-title">Trainings, Workshops &amp; Conferences</h2>
+
+        <h3 class="subsection-title">Trainings &amp; Workshops</h3>
+        <ul class="timeline-list">
+          <li class="timeline-item">
+            <div class="timeline-date">03–07 Aug 2026</div>
+            <div class="timeline-body">
+              <strong>Training of Trainer (TOT) Program on CLIMADA for Improving Climate Governance in Pakistan</strong>
+              <span>GIZ and United Nations University (UNU), Islamabad, Pakistan</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">07 Jul – 03 Aug 2025</div>
+            <div class="timeline-body">
+              <strong>Evaluation of Non-Hydrostatic Dynamics Downscaling of Climate Projection over the Indus Basin</strong>
+              <span>Meteorological Research Institute (MRI), Tsukuba, Japan</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">01 Nov – 31 Dec 2023</div>
+            <div class="timeline-body">
+              <strong>Resilience of Ecosystem to Flash Drought over Central Europe</strong>
+              <span>Indian Institute of Technology (IIT) Dhanbad, India</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">16 Jan – 03 Mar 2023</div>
+            <div class="timeline-body">
+              <strong>Non-Hydrostatic Dynamics Downscaling of Climate Projection</strong>
+              <span>Meteorological Research Institute (MRI), Tsukuba, Japan</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">18–30 Mar 2019</div>
+            <div class="timeline-body">
+              <strong>Rapid Assessment of Stream Data for Flood and Drought</strong>
+              <span>Department of Civil Engineering, UET Lahore, Pakistan</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">13–15 Dec 2018</div>
+            <div class="timeline-body">
+              <strong>Water Governance, International Water Law and Multi-Stakeholder Processes</strong>
+              <span>Global Water Partnership (GWP) · Yunnan University, Kunming, China</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">13–19 May 2018</div>
+            <div class="timeline-body">
+              <strong>APHRODITE-2 Extreme Precipitation Analysis for Gridded Data Workshop</strong>
+              <span>Hirosaki University, Aomori, Japan</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">21–23 May 2017</div>
+            <div class="timeline-body">
+              <strong>Summer School on Water Informatics: Science and Systems</strong>
+              <span>Center for Water Informatics and Technology (WIT), LUMS, Lahore, Pakistan</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">18–29 Jul 2016</div>
+            <div class="timeline-body">
+              <strong>Remote Sensing and GIS Application on Flood Management</strong>
+              <span>UNESCO Short Course · NUST Institute of Civil Engineering, Islamabad, Pakistan</span>
+            </div>
+          </li>
+        </ul>
+
+        <h3 class="subsection-title">Conference Presentations</h3>
+        <ul class="timeline-list">
+          <li class="timeline-item">
+            <div class="timeline-date">May 2026</div>
+            <div class="timeline-body">
+              <strong>Climate Driven Hydrological Intensification and Its Implications for Water Availability</strong>
+              <span>28th EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">May 2026</div>
+            <div class="timeline-body">
+              <strong>Kilometer Scale Climate Modeling of Extremes: Evaluation of the Non-Hydrostatic Regional Climate Model (NHRCM) over Pakistan</strong>
+              <span>28th EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">April 2025</div>
+            <div class="timeline-body">
+              <strong>Spatiotemporal Evaluation of Vertical Dynamics Propagation of Flash Drought and Driving Mechanisms in the Indus Basin in South Asia (1970–2023)</strong>
+              <span>27th EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">April 2024</div>
+            <div class="timeline-body">
+              <strong>Flash Drought Impacts on Ecosystems: Insights on Resistance and Resilience</strong>
+              <span>26th EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">April 2023</div>
+            <div class="timeline-body">
+              <strong>Space and Time Characteristics of Flash Drought Over Central Europe</strong>
+              <span>25th EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">May 2022</div>
+            <div class="timeline-body">
+              <strong>Investigate the Characteristics of Flash Drought Across Europe</strong>
+              <span>XIth Scientific Assembly of IAHS 2022, Montpellier, France</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">April 2021</div>
+            <div class="timeline-body">
+              <strong>Flash Drought Research: Growth, Challenges and Future Perspectives</strong>
+              <span>23rd EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">April 2021</div>
+            <div class="timeline-body">
+              <strong>Quantification of Water Sustainability in Upper Indus River Basin through RRV Concept</strong>
+              <span>23rd EGU General Assembly, Vienna, Austria</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">Sep 2020</div>
+            <div class="timeline-body">
+              <strong>Global Research Trends in Flash Drought: A Bibliometric Analysis (2000–2019)</strong>
+              <span>Conference of Hydrology, GIS and the Environment 2020, Prague, Czech Republic</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">Dec 2018</div>
+            <div class="timeline-body">
+              <strong>The Impact of Climate Change and Indus Water Treaty on the Downstream Catchments</strong>
+              <span>Yunnan University, Kunming, China · Global Water Partnership (GWP)</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">Sep 2018</div>
+            <div class="timeline-body">
+              <strong>Assessment of Water Sustainability of the Himalayan Watershed in Pakistan under Climate Change</strong>
+              <span>7th World Sustainability Forum, UIBE, Beijing, China</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">Dec 2017</div>
+            <div class="timeline-body">
+              <strong>Future Water Availability under Climate Change (Chenab) · Climatic Variability Impact on Kanshi Basin · Hydro-Meteorological Drought in Upper Indus Basin</strong>
+              <span>International Science-Policy Conference on Climate Change, Islamabad (GCISC &amp; University of Utah)</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">Nov 2017</div>
+            <div class="timeline-body">
+              <strong>Statistical Approach to Assess Hydrological Alteration in the Mangla Watershed of Pakistan</strong>
+              <span>Think Adapt 2017, University of Agriculture, Peshawar, Pakistan</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+
+    <!-- PUBLICATIONS -->
+    <section class="section section-light" id="publications">
+      <div class="container">
+        <h2 class="section-title">Selected Publications</h2>
+        <p style="color:var(--text-muted); margin-bottom:32px;">
+          Peer-reviewed research on flash droughts, climate extremes, and satellite precipitation — in journals including <em>Remote Sensing of Environment</em>, <em>Water</em>, and <em>Atmosphere</em>.
+        </p>
+        <article class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-body">
+            <h4>Review of GPM IMERG performance: A global perspective.</h4>
+            <div class="pub-meta"><i>Remote Sensing of Environment</i>, 268, 112754. <span class="q-badge q1">Zone-1 · Q1</span></div>
+          </div>
+        </article>
+        <article class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-body">
+            <h4>Systematic analysis of the flash drought research: contribution, collaboration, and challenges.</h4>
+            <div class="pub-meta"><i>Theoretical and Applied Climatology</i>, 1–14. <span class="q-badge q2">Zone-4 · Q2</span></div>
+          </div>
+        </article>
+        <article class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-body">
+            <h4>The Perturbation of Mangla Watershed Ecosystem in Pakistan Due to Hydrological Alteration.</h4>
+            <div class="pub-meta"><i>Water</i>, 15(4), 656. <span class="q-badge q2">Zone-3 · Q2</span></div>
+          </div>
+        </article>
+        <div style="margin-top:36px;">
+          <a class="btn btn-primary" href="https://scholar.google.com/citations?user=DB9Dlp8AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">All Publications on Google Scholar →</a>
         </div>
       </div>
     </section>
 
-    <!-- ================= SELECTED PUBLICATIONS ================= -->
-    <section class="section section-tight">
+    <!-- CTA
+    <section class="cta" id="contact">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Research</span>
-          <h2>Selected <span class="accent">Publications</span></h2>
-          <p>Peer-reviewed research on flash droughts, climate extremes, and satellite precipitation — in journals including Remote Sensing of Environment, Water, and Atmosphere.</p>
-        </div>
-        <div class="pub-list">
-          <article class="pub-item reveal">
-            <div class="pub-year">2023</div>
-            <div class="pub-body">
-              <h4>Review of GPM IMERG performance: A global perspective.</h4>
-              <div class="pub-meta"><i>Remote Sensing of Environment</i>, 268, 112754. <span class="q-badge q1">Zone-1 · Q1</span></div>
-            </div>
-          </article>
-          <article class="pub-item reveal reveal-d1">
-            <div class="pub-year">2023</div>
-            <div class="pub-body">
-              <h4>Systematic analysis of the flash drought research: contribution, collaboration, and challenges.</h4>
-              <div class="pub-meta"><i>Theoretical and Applied Climatology</i>, 1–14. <span class="q-badge q2">Zone-4 · Q2</span></div>
-            </div>
-          </article>
-          <article class="pub-item reveal reveal-d2">
-            <div class="pub-year">2023</div>
-            <div class="pub-body">
-              <h4>The Perturbation of Mangla Watershed Ecosystem in Pakistan Due to Hydrological Alteration.</h4>
-              <div class="pub-meta"><i>Water</i>, 15(4), 656. <span class="q-badge q2">Zone-3 · Q2</span></div>
-            </div>
-          </article>
-        </div>
-        <div style="text-align:center; margin-top:34px;">
-          <a class="btn btn-primary" href="publications.html">All Publications
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <h2>Building Climate Resilience,<br />One Basin at a Time</h2>
+        <p>Available for expert consultation, research collaboration, capacity building, and climate–water advisory across the region and beyond.</p>
+        <div>
+          <a class="btn btn-primary" href="mailto:ak.rahim001@gmail.com">Contact Me</a>
+          <a class="btn btn-outline" href="assets/cv/Akif_Rahim_CV.pdf" download="Akif_Rahim_CV.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- ================= CTA ================= -->
-    <section class="section section-dark cta-band">
-      <div class="container">
-        <span class="eyebrow eyebrow-light" style="justify-content:center;">Let's Collaborate</span>
-        <h2>Building Climate Resilience,<br /><span class="accent-cyan">One Basin at a Time</span></h2>
-        <p>Available for expert consultation, research collaboration, capacity building, and climate–water advisory across the region and beyond.</p>
-        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-          <a class="btn btn-accent" href="contact.html">Contact Me</a>
-          <a class="btn btn-ghost-light" href="mailto:ak.rahim001@gmail.com?subject=Request%20CV%20%E2%80%94%20Dr.%20Akif%20Rahim">Request CV</a>
-        </div>
+    <!-- Dark Contact Section (Direct Contact Info) -->
+<section class="contact-section" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-heading">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-details">
+      <!-- Address -->
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>House 76, Ismail Block, Al-Hafeez Garden, Phase-1,<br>Manawan GT Road, Lahore, Pakistan</span>
       </div>
-    </section>
+      <!-- Phone -->
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <a href="tel:+923218561374">+92-321-8561374</a>
+      </div>
+      <!-- Email 1 -->
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-10 6L2 7"/>
+        </svg>
+        <a href="mailto:ak.rahim001@gmail.com">ak.rahim001@gmail.com</a>
+      </div>
+      <!-- Email 2 -->
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-10 6L2 7"/>
+        </svg>
+        <a href="mailto:akif.rahim@cgiar.org">akif.rahim@cgiar.org</a>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="index.html">
-          <span class="brand-text">
-            <span class="brand-name">Dr. Akif Rahim</span>
-            <span class="brand-sub" style="color:#8ba6c9;">Hydro-Climatologist · PhD</span>
-          </span>
-        </a>
-        <p>Predicting extremes early, planning water wisely — leading the intersection of climate science, hydrology, and data-driven decision support.</p>
-        <div class="footer-social">
-          <a href="mailto:ak.rahim001@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          </a>
-          <a href="https://scholar.google.com" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5v6"/><path d="M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
-          </a>
-          <a href="tel:+923218561374" aria-label="Phone">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h4>Navigation</h4>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="experience.html">Experience</a>
-          <a href="projects.html">Projects</a>
-          <a href="publications.html">Publications</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <div>
-        <h4>Inquiries</h4>
-        <div class="footer-contact">
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>House 76, Ismail Block, Al-Hafeez Garden Phase-1, Manawa GT Road, Lahore, Pakistan</span>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+923218561374">+92 321 8561374</a>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-            <a href="mailto:ak.rahim001@gmail.com">ak.rahim001@gmail.com</a>
-          </div>
-        </div>
-      </div>
+  <div class="container footer-inner">
+    <div class="footer-brand">© <span id="year">2026</span> Dr. Akif Rahim. All Rights Reserved.</div>
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
+      <a href="https://pakdms.iwmi.org" target="_blank" rel="noopener">PakDMS</a>
     </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2025</span> Dr. Akif Rahim. All Rights Reserved.</span>
-      <span>Crafting climate resilience with <span class="heart">♥</span> data</span>
-    </div>
-  </footer>
+  </div>
+</footer>
 
-  <button class="back-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-  </button>
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('siteNav');
+    if (toggle) {
+      toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".site-nav .nav-link");
+
+  function highlightNavOnScroll() {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach((current) => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 100; // Header offset
+      const sectionId = current.getAttribute("id");
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}` || link.getAttribute("href") === `index.html#${sectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", highlightNavOnScroll);
+});
+  </script>
 </body>
 </html>

@@ -3,291 +3,582 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Experience | Dr. Akif Rahim</title>
-  <meta name="description" content="Professional track record of Dr. Akif Rahim — National Researcher at IWMI, ex-Deputy Director Meteorology (FRAU, Punjab Irrigation), PhD researcher at CZU Prague, and more." />
+  <title>Experience | Dr. Akif Rahim</title>
+  <meta name="description" content="Professional work experience of Dr. Akif Rahim — Hydro-Climatologist & Flood–Drought Modeler." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230B1C38'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='%2322D3EE' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f172a;
+      --navy-mid: #1e293b;
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --dark: #1a1a2e;
+      --darker: #0f0f1a;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --light: #f8f9fa;
+      --white: #ffffff;
+      --border: #e9ecef;
+      --radius: 10px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      background: #fafbfc;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--primary-dark); text-decoration: underline; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* ========== HEADER ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--primary); text-decoration: none; }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-icons a { color: var(--text-muted); display: flex; }
+    .header-icons a:hover { color: var(--primary); }
+    .header-icons svg { width: 20px; height: 20px; }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--dark);
+    }
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: var(--white);
+      padding: 60px 0 50px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    /* ========== EXPERIENCE ========== */
+    .section {
+      padding: 60px 0 80px;
+    }
+    .exp-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.25s ease, border-color 0.25s;
+    }
+    .exp-item:hover {
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+    .exp-item.open {
+      border-color: #94a3b8;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+    }
+    .exp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .exp-header-left {
+      flex: 1;
+      min-width: 0;
+    }
+    .exp-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .exp-org {
+      font-size: 0.95rem;
+      color: #334155;
+      font-weight: 500;
+    }
+    .exp-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+    .exp-date {
+      font-size: 0.88rem;
+      color: #475569;
+      font-weight: 500;
+      white-space: nowrap;
+      background: #f1f5f9;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .exp-chevron {
+      width: 22px;
+      height: 22px;
+      color: var(--text-muted);
+      transition: transform 0.3s ease, color 0.2s;
+      flex-shrink: 0;
+    }
+    .exp-item.open .exp-chevron {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+    .exp-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .exp-item.open .exp-body {
+      max-height: 800px;
+    }
+    .exp-body-inner {
+      padding: 0 24px 24px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+    .exp-location {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .exp-location svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.7;
+    }
+    .exp-list {
+      list-style: none;
+      padding: 0;
+    }
+    .exp-list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .exp-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    .exp-list li strong {
+      color: var(--dark);
+    }
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--darker);
+      color: rgba(255,255,255,0.6);
+      padding: 40px 0 24px;
+      font-size: 0.9rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      margin-left: 20px;
+      font-size: 0.88rem;
+    }
+    .footer-links a:hover { color: #93c5fd; }
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 700px) {
+      .site-nav { display: none; }
+      .nav-toggle { display: flex; }
+      .site-nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        gap: 16px;
+      }
+      .header-icons { display: none; }
+      .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .exp-meta {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .page-hero h1 { font-size: 1.7rem; }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Dr. Akif Rahim — Home">
-        <span class="brand-text">
-          <span class="brand-name">Dr. Akif Rahim</span>
-          <span class="brand-sub">Hydro-Climatologist · PhD</span>
-        </span>
-      </a>
-      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a class="brand" href="index.html">Dr. Akif Rahim</a>
+      <nav class="site-nav" id="siteNav">
         <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="index.html#skills">Skills</a>
+        <a class="nav-link" href="index.html#publications">Publications</a>
         <a class="nav-link active" href="experience.html">Experience</a>
-        <a class="nav-link" href="projects.html">Projects</a>
-        <a class="nav-link" href="publications.html">Publications</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-        <a class="btn btn-accent btn-sm nav-cv" href="mailto:ak.rahim001@gmail.com?subject=Request%20CV%20%E2%80%94%20Dr.%20Akif%20Rahim">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Request CV
-        </a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link" href="trainings.html">Trainings</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <div class="header-icons">
+        <a href="mailto:ak.rahim001@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=DB9Dlp8AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5v6"/><path d="M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
-
-  <main>
-    <!-- ================= PAGE HERO ================= -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow eyebrow-light">Professional Track Record</span>
-        <h1>Strategic Leadership in<br /><span class="accent-cyan">Climate &amp; Water Management</span></h1>
-        <p class="lead">A comprehensive history of delivering high-impact initiatives for national and international agencies — from operational flood forecasting to frontier climate research.</p>
-        <div class="hero-meta">
-          <span class="chip">15+ Years</span>
-          <span class="chip">8 Professional Roles</span>
-          <span class="chip">4 Countries</span>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Work Experience</h1>
+      <p>15+ years across research, operational forecasting, and climate-water systems in Pakistan, Europe, and Japan.</p>
+    </div>
+  </section>
+  <!-- EXPERIENCE LIST -->
+  <section class="section">
+    <div class="container">
+      <!-- 1. IWMI -->
+      <div class="exp-item open">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">National Researcher | Climate Change and Adaptation</div>
+            <div class="exp-org">International Water Management Institute (IWMI)</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Oct 2024 – Oct 2026</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lahore, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li><strong>CGIAR Nexus Gains Initiative (Indus Basin):</strong> Downscaled high-resolution climate projections to assess future water availability. Integrated climate projections with hydro-economic models. Analyzed climate extremes and population exposure/vulnerability across the basin.</li>
+              <li><strong>Pakistan Drought Monitoring System (Pak-DMS) – FCDO, UK:</strong> Designed and developed the drought forecasting module using the VIC hydrological model and AI-based surrogate modeling for efficient calibration.</li>
+              <li><strong>Assessment of Water Availability (FAO-funded):</strong> Assessed surface water availability in selected ungauged watersheds of Balochistan and supported mapping of potential aquifer recharge zones.</li>
+              <li><strong>Capacity Building – Water Accounting Training (FCDO, UK):</strong> Designed and delivered a three-day climate data and water accounting training for KPK Government stakeholders. Led consultation workshops for Punjab and KPK water professionals under the WRAP project.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- ================= ACTIVE ENGAGEMENT ================= -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Active Engagement</span>
-          <h2>Current <span class="accent">Position</span></h2>
-        </div>
-        <div class="card reveal" style="max-width: 900px; margin: 0 auto; border-left: 4px solid var(--cyan);">
-          <div class="card-top" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:12px;">
-            <span class="badge-current">Current Position</span>
-            <span class="t-when">Oct 2024 — Present</span>
+      <!-- 2. FRAU Hybrid -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">Deputy Director | Meteorology (Hybrid)</div>
+            <div class="exp-org">Flood Risk Assessment Unit (FRAU), Punjab Irrigation Department</div>
           </div>
-          <h3 style="font-size:24px;">National Researcher — Climate Change &amp; Adaptation</h3>
-          <div class="t-where" style="margin:8px 0 14px;">International Water Management Institute (IWMI) · CGIAR — Lahore, Pakistan</div>
-          <ul class="t-points">
-            <li><b>CGIAR Nexus Gains Initiative (Indus Basin):</b> downscaled high-resolution climate projections and integrated them with hydro-economic models to assess future water availability and resource management.</li>
-            <li>Analyzed climate extremes and their projected changes across the Indus Basin, assessing population exposure and vulnerability to extreme climate events.</li>
-            <li><b>Pak-DMS (FCDO, UK):</b> designed the drought-forecasting module using the VIC hydrological model with AI-based surrogate modeling for efficient calibration.</li>
-            <li><b>FAO project:</b> assessed surface-water availability in ungauged river basins of Balochistan and supported mapping of potential aquifer-recharge zones.</li>
-            <li><b>FCDO WRAP:</b> designed and delivered a 3-day climate data &amp; water-accounting training for KPK government stakeholders; led consultation workshops for Punjab and KPK water professionals.</li>
-          </ul>
+          <div class="exp-meta">
+            <span class="exp-date">Aug 2021 – Sep 2024</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lahore, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li>Monitored and forecasted river flows across Indus Basin rim stations.</li>
+              <li>Analyzed hydrological data for flood forecasting, reporting, and modeling.</li>
+              <li>Applied SAR-based geospatial tools for flood depth estimation and monitored upstream reservoir operations.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- ================= PROFESSIONAL HISTORY ================= -->
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow eyebrow-light">Professional History</span>
-          <h2>Fifteen Years Across <span class="accent-cyan">Science, Service &amp; Systems</span></h2>
+      <!-- 3. PhD Researcher -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">PhD Researcher</div>
+            <div class="exp-org">Hydro Climate Variability Research Group, Czech University of Life Sciences</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Dec 2019 – Jun 2024</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
         </div>
-        <div class="timeline">
-          <div class="t-item t-accent reveal">
-            <span class="t-when">Aug 2021 – Sep 2024</span>
-            <h3>Deputy Director — Meteorology (Hybrid)</h3>
-            <div class="t-where">Flood Risk Assessment Unit (FRAU), Government of Punjab Irrigation Department — Lahore, Pakistan</div>
-            <ul class="t-points">
-              <li>Monitored and forecast river flows across Indus Basin rim stations; analyzed hydrological data for flood forecasting, reporting, and modeling.</li>
-              <li>Applied SAR-based geospatial tools for flood-depth estimation and monitored upstream reservoir operations.</li>
-              <li>Collaborated with Google Asia-Pacific on an AI-driven reservoir-operation and flood-forecasting system, now operational with the Punjab Irrigation Department.</li>
-              <li>Delivered timely flood forecasts during the 2023 and 2025 events — recognized with a formal Letter of Appreciation.</li>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Prague, Czech Republic
+            </div>
+            <ul class="exp-list">
+              <li>Investigated flash drought characteristics across Central Europe (IGA-funded project).</li>
+              <li>Identified ecosystem response to flash droughts in Czech Republic.</li>
+              <li>Designed research methodology, prepared research proposals, and developed calibration/validation tools for hydrological modeling.</li>
+              <li>Supported the team in data preparation and analysis using machine and deep learning approaches.</li>
             </ul>
           </div>
-          <div class="t-item reveal">
-            <span class="t-when">Dec 2019 – Jun 2024</span>
-            <h3>PhD Researcher</h3>
-            <div class="t-where">Hydro-Climate Variability Research Group, Czech University of Life Sciences — Prague, Czech Republic</div>
-            <ul class="t-points">
-              <li>Investigated flash-drought characteristics across Central Europe (project funded by the International Grant Agency of the Czech Republic).</li>
-              <li>Identified ecosystem response to flash droughts; designed research methodology and prepared research proposals.</li>
-              <li>Developed calibration and validation tools for hydrological modeling; supported the team with ML/DL-based data preparation and analysis.</li>
-              <li>Visiting researcher at the Japan Meteorological Research Institute (MRI) — contributing to 5 km × 5 km high-resolution climate projections for the Indus Basin.</li>
-              <li>Taught “Exploratory Data Analysis” and “Environmental Data Presentation” to MSc students.</li>
+        </div>
+      </div>
+      <!-- 4. FRAU 2017-2019 -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">Deputy Director | Meteorology</div>
+            <div class="exp-org">Flood Risk Assessment Unit (FRAU), Punjab Irrigation Department</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Aug 2017 – Nov 2019</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lahore, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li>Data assimilation of remotely sensed observations into hydrologic, hydrodynamic and agricultural models.</li>
+              <li>Streamflow forecasting in support of reservoir operations using airborne snow observations in Indus western rivers.</li>
+              <li>Evaluation of satellite data (GPM, TRMM) for transboundary catchments and generation of barrage operations for different flood scenarios.</li>
+              <li>Assessment of hydrological alteration for River Ravi, homogeneous regions of rainfall during monsoon, and trend analysis of rainfall and temperature in Punjab.</li>
             </ul>
           </div>
-          <div class="t-item reveal">
-            <span class="t-when">Aug 2017 – Nov 2019</span>
-            <h3>Deputy Director — Meteorology</h3>
-            <div class="t-where">Flood Risk Assessment Unit (FRAU), Government of Punjab Irrigation Department — Lahore, Pakistan</div>
-            <ul class="t-points">
-              <li>Assimilated remotely sensed observations into hydrologic, hydrodynamic, and agricultural models.</li>
-              <li>Streamflow forecasting supporting reservoir operations using airborne snow observations in the Indus western rivers.</li>
-              <li>Evaluated GPM and TRMM satellite precipitation data for transboundary catchments; generated barrage operation guidance during floods.</li>
-              <li>Assessed hydrological alteration of River Ravi, homogeneous monsoon rainfall regions, and rainfall/temperature trends across Punjab.</li>
-              <li>Prepared monthly, quarterly, and annual flood-risk and flood-forecasting reports.</li>
+        </div>
+      </div>
+      <!-- 5. Assistant Director -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">Assistant Director | Flood Routing</div>
+            <div class="exp-org">Flood Risk Assessment Unit (FRAU), Punjab Irrigation Department</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Feb 2016 – Jul 2017</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lahore, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li>Constructed semi-distributed hydrological model of transboundary catchment of River Chenab and distributed modeling of adjacent nullahs.</li>
+              <li>Prepared flood inundation maps for Indus River and flood routing model of River Jhelum downstream of Mangla Dam.</li>
+              <li>Developed water distribution model and evaluated efficiency of water distribution plan for Punjab Irrigation.</li>
+              <li>Applied SRM models for Chenab and assessed climate change impacts on water availability. Prepared flood reports of 2016.</li>
             </ul>
           </div>
-          <div class="t-item reveal">
-            <span class="t-when">Feb 2016 – Jul 2017</span>
-            <h3>Assistant Director — Flood Routing</h3>
-            <div class="t-where">Flood Risk Assessment Unit (FRAU), Government of Punjab Irrigation Department — Lahore, Pakistan</div>
-            <ul class="t-points">
-              <li>Constructed the semi-distributed hydrological model of the transboundary River Chenab catchment and adjacent nullahs.</li>
-              <li>Produced flood-inundation maps for the Indus River; developed the flood-routing model of River Jhelum downstream of Mangla Dam.</li>
-              <li>Built SRM (snowmelt-runoff) models for Chenab and assessed climate-change impacts on water availability.</li>
-              <li>Modeled water distribution and evaluated the efficiency of the distribution plan for Punjab irrigation.</li>
+        </div>
+      </div>
+      <!-- 6. Soil & Water -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">Soil and Water Sanitation Analyst</div>
+            <div class="exp-org">Estate Accommodator</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Mar 2014 – Jan 2016</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Islamabad, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li>Soil sampling and testing; monitoring and evaluation of water sanitation and supply works.</li>
+              <li>GIS mapping for geological strata; supervision of construction works of housing societies.</li>
+              <li>Hydrological modeling, management of water measuring equipment, data entry and report writing.</li>
             </ul>
           </div>
-          <div class="t-item reveal">
-            <span class="t-when">Mar 2014 – Jan 2016</span>
-            <h3>Soil &amp; Water Sanitation Analyst</h3>
-            <div class="t-where">Estate Accommodator — Islamabad, Pakistan</div>
-            <ul class="t-points">
-              <li>Soil sampling and testing; monitoring &amp; evaluation of water sanitation and supply works.</li>
-              <li>GIS mapping of geological strata; supervision of housing-society construction works in Islamabad.</li>
-              <li>Hydrological modeling, water-measuring equipment management, and final project reporting.</li>
-            </ul>
+        </div>
+      </div>
+      <!-- 7. Junior Hydrologist -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">Junior Hydrologist</div>
+            <div class="exp-org">Mott MacDonald Pakistan (MMP) — Rehabilitation of Jinnah Barrage</div>
           </div>
-          <div class="t-item reveal">
-            <span class="t-when">Mar 2012 – Sep 2012</span>
-            <h3>Junior Hydrologist</h3>
-            <div class="t-where">Rehabilitation of Jinnah Barrage on Indus River — Mott MacDonald Pakistan (MMP), Lahore</div>
-            <ul class="t-points">
-              <li>Implemented and reviewed the Real-Time Flow Monitoring System (RTFM) framework.</li>
+          <div class="exp-meta">
+            <span class="exp-date">Mar 2012 – Sep 2012</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lahore, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li>Implemented and reviewed the framework of Real-Time Flow Monitoring System (RTFM).</li>
               <li>Collected hydraulic data of Jinnah Barrage and conducted field surveys.</li>
-              <li>Coordinated with the Punjab Irrigation Department on project progress.</li>
-            </ul>
-          </div>
-          <div class="t-item reveal">
-            <span class="t-when">Sep 2009 – Feb 2012</span>
-            <h3>Lecturer — Physics</h3>
-            <div class="t-where">Punjab Group of Colleges — Lahore, Pakistan</div>
-            <ul class="t-points">
-              <li>Designed physics study plans and delivered lectures.</li>
-              <li>Supervised examination duties and managed teacher duty rosters.</li>
-              <li>Organized and managed recreation trips for students.</li>
+              <li>Collaborated with Punjab Irrigation Department regarding project progress.</li>
             </ul>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ================= SKILLS ================= -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Core Technical Proficiencies</span>
-          <h2>Methodological &amp; <span class="accent">Computational Toolkit</span></h2>
+      <!-- 8. Lecturer -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-header-left">
+            <div class="exp-title">Lecturer</div>
+            <div class="exp-org">Department of Physics, Punjab Group of Colleges</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Sep 2009 – Feb 2012</span>
+            <svg class="exp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
         </div>
-        <div class="grid-3">
-          <div class="skill reveal"><div class="skill-top"><span class="skill-name">Surface Water Hydrological Modeling (HEC-RAS, HEC-HMS)</span><span class="skill-years">6+ yrs</span></div><div class="skill-bar"><span style="width:88%"></span></div></div>
-          <div class="skill reveal reveal-d1"><div class="skill-top"><span class="skill-name">Remote Sensing / GIS</span><span class="skill-years">6+ yrs</span></div><div class="skill-bar"><span style="width:88%"></span></div></div>
-          <div class="skill reveal reveal-d2"><div class="skill-top"><span class="skill-name">Climate Data Analysis</span><span class="skill-years">5+ yrs</span></div><div class="skill-bar"><span style="width:78%"></span></div></div>
-          <div class="skill reveal"><div class="skill-top"><span class="skill-name">R &amp; Python Programming</span><span class="skill-years">4+ yrs</span></div><div class="skill-bar"><span style="width:70%"></span></div></div>
-          <div class="skill reveal reveal-d1"><div class="skill-top"><span class="skill-name">Sustainability Analysis</span><span class="skill-years">3+ yrs</span></div><div class="skill-bar"><span style="width:60%"></span></div></div>
-          <div class="skill reveal reveal-d2"><div class="skill-top"><span class="skill-name">Data Visualization</span><span class="skill-years">3+ yrs</span></div><div class="skill-bar"><span style="width:60%"></span></div></div>
-          <div class="skill reveal"><div class="skill-top"><span class="skill-name">Big Data / Data Science</span><span class="skill-years">2+ yrs</span></div><div class="skill-bar"><span style="width:48%"></span></div></div>
-          <div class="skill reveal reveal-d1"><div class="skill-top"><span class="skill-name">Groundwater Modeling / Quality Analysis</span><span class="skill-years">2+ yrs</span></div><div class="skill-bar"><span style="width:48%"></span></div></div>
-          <div class="skill reveal reveal-d2"><div class="skill-top"><span class="skill-name">Cloud Computing</span><span class="skill-years">1+ yrs</span></div><div class="skill-bar"><span style="width:32%"></span></div></div>
-        </div>
-        <div class="tags" style="justify-content:center; margin-top:34px;">
-          <span class="tag">VIC</span><span class="tag">HEC-HMS</span><span class="tag">HEC-RAS</span><span class="tag">CLIMADA</span><span class="tag">NHRCM</span><span class="tag">SRM</span><span class="tag">GEE</span><span class="tag">SAR Analysis</span><span class="tag">GPM / TRMM</span><span class="tag">Python</span><span class="tag">R</span><span class="tag">Machine Learning</span><span class="tag">AI Surrogate Modeling</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TRAININGS ================= -->
-    <section class="section section-tight">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Continuous Learning</span>
-          <h2>Trainings &amp; <span class="accent">Workshops</span></h2>
-        </div>
-        <div class="training-list">
-          <div class="training reveal"><time>Aug 2026</time><div><b>Training of Trainers (ToT) on CLIMADA for Improving Climate Governance in Pakistan</b><span>GIZ &amp; United Nations University (UNU) — Islamabad, Pakistan</span></div></div>
-          <div class="training reveal"><time>Jul–Aug 2025</time><div><b>Evaluation of Non-Hydrostatic Dynamic Downscaling of Climate Projections over the Indus Basin</b><span>Meteorological Research Institute (MRI) — Tsukuba, Japan</span></div></div>
-          <div class="training reveal"><time>Nov–Dec 2023</time><div><b>Resilience of Ecosystem to Flash Drought over Central Europe</b><span>Indian Institute of Technology (IIT) Dhanbad — India</span></div></div>
-          <div class="training reveal"><time>Jan–Mar 2023</time><div><b>Non-Hydrostatic Dynamic Downscaling of Climate Projections</b><span>Meteorological Research Institute (MRI) — Tsukuba, Japan</span></div></div>
-          <div class="training reveal"><time>Mar 2019</time><div><b>Rapid Assessment of Stream Data for Flood and Drought</b><span>Department of Civil Engineering, UET — Lahore, Pakistan</span></div></div>
-          <div class="training reveal"><time>Dec 2018</time><div><b>Water Governance, International Water Law &amp; Multi-Stakeholder Processes</b><span>Global Water Partnership (GWP), Yunnan University — Kunming, China</span></div></div>
-          <div class="training reveal"><time>May 2018</time><div><b>APHRODITE-2 Extreme Precipitation Analysis for Gridded Data</b><span>Hirosaki University — Aomori, Japan</span></div></div>
-          <div class="training reveal"><time>May 2017</time><div><b>Summer School on Water Informatics: Science and Systems</b><span>Centre for Water Informatics &amp; Technology (WIT), LUMS — Lahore, Pakistan</span></div></div>
-          <div class="training reveal"><time>Jul 2016</time><div><b>Remote Sensing and GIS Applications in Flood Management</b><span>UNESCO short course, NUST Institute of Civil Engineering — Islamabad, Pakistan</span></div></div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lahore, Pakistan
+            </div>
+            <ul class="exp-list">
+              <li>Designed study plans of Physics; supervised examination duties and managed duty roster of teachers.</li>
+              <li>Organized and managed recreational trips for students.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- ================= CTA ================= -->
-    <section class="section section-dark cta-band section-tight">
-      <div class="container">
-        <h2>See the Systems This Experience <span class="accent-cyan">Built</span></h2>
-        <p>Operational national platforms, AI forecasting systems, and research that shapes policy.</p>
-        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-          <a class="btn btn-accent" href="projects.html">View Projects</a>
-          <a class="btn btn-ghost-light" href="publications.html">View Publications</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ================= FOOTER ================= -->
+    </div>
+  </section>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="index.html">
-          <span class="brand-text">
-            <span class="brand-name">Dr. Akif Rahim</span>
-            <span class="brand-sub" style="color:#8ba6c9;">Hydro-Climatologist · PhD</span>
-          </span>
-        </a>
-        <p>Predicting extremes early, planning water wisely — leading the intersection of climate science, hydrology, and data-driven decision support.</p>
-        <div class="footer-social">
-          <a href="mailto:ak.rahim001@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          </a>
-          <a href="https://scholar.google.com" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5v6"/><path d="M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
-          </a>
-          <a href="tel:+923218561374" aria-label="Phone">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h4>Navigation</h4>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="experience.html">Experience</a>
-          <a href="projects.html">Projects</a>
-          <a href="publications.html">Publications</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <div>
-        <h4>Inquiries</h4>
-        <div class="footer-contact">
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>House 76, Ismail Block, Al-Hafeez Garden Phase-1, Manawa GT Road, Lahore, Pakistan</span>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+923218561374">+92 321 8561374</a>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-            <a href="mailto:ak.rahim001@gmail.com">ak.rahim001@gmail.com</a>
-          </div>
-        </div>
-      </div>
+  <div class="container footer-inner">
+    <div class="footer-brand">© <span id="year">2026</span> Dr. Akif Rahim. All Rights Reserved.</div>
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
+      <a href="https://pakdms.iwmi.org" target="_blank" rel="noopener">PakDMS</a>
     </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2025</span> Dr. Akif Rahim. All Rights Reserved.</span>
-      <span>Crafting climate resilience with <span class="heart">♥</span> data</span>
-    </div>
-  </footer>
-
-  <button class="back-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-  </button>
-
-  <script src="assets/js/main.js"></script>
+  </div>
+</footer>
+  <script>
+    // Accordion: only one open at a time
+    document.querySelectorAll('.exp-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.exp-item').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('siteNav');
+    if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

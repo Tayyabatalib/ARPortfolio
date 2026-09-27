@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research & Portfolio | Dr. Akif Rahim</title>
+  <meta name="description" content="Research projects and portfolio of Dr. Akif Rahim in climate science, hydrology, drought monitoring and machine learning for water resources." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230B1C38'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='%2322D3EE' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --dark: #1a1a2e;
+      --darker: #0f0f1a;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --light: #f8f9fa;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      background: #f1f5f9;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--primary-dark); text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    }
+    .brand {
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.15rem;
+      color: var(--dark); text-decoration: none;
+    }
+    .brand:hover { color: var(--primary); text-decoration: none; }
+    .site-nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .nav-link {
+      font-size: 0.92rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--primary); text-decoration: none; }
+    .header-icons { display: flex; align-items: center; gap: 16px; }
+    .header-icons a { color: var(--text-muted); display: flex; }
+    .header-icons a:hover { color: var(--primary); }
+    .header-icons svg { width: 20px; height: 20px; }
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--dark); }
+
+    .page-hero {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: var(--white); padding: 60px 0 50px; text-align: center;
+    }
+    .page-hero h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    .page-hero p {
+      color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto; font-size: 1.05rem;
+    }
+
+    .section { padding: 50px 0 80px; }
+
+    /* Enhanced Research Cards */
+    .research-item {
+      display: flex;
+      gap: 36px;
+      margin-bottom: 32px;
+      padding: 28px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      align-items: center;
+    }
+    .research-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* Standard Visual Frame */
+    .research-visual {
+      flex-shrink: 0;
+      width: 420px;
+      height: 280px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+    }
+    .research-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+      transition: transform 0.3s ease;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .research-visual:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Dual Image Frame (CGIAR) */
+    .research-visual-double {
+      display: flex;
+      gap: 12px;
+      width: 440px;
+      height: 280px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .research-visual-double .double-wrapper {
+      flex: 1;
+      height: 100%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      padding: 6px;
+    }
+    .research-visual-double img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0;
+    }
+
+    .research-body { flex: 1; }
+    .research-body h3 {
+      font-size: 1.25rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .research-body p {
+      font-size: 0.98rem;
+      color: #334155;
+      margin-bottom: 14px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--primary-dark);
+      background: #e0edff;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .site-footer {
+      background: var(--darker); color: rgba(255,255,255,0.6);
+      padding: 40px 0 24px; font-size: 0.9rem;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px; max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    }
+    .footer-brand {
+      font-family: 'Montserrat', sans-serif; font-weight: 600; color: rgba(255,255,255,0.9);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.6); margin-left: 20px; font-size: 0.88rem;
+    }
+    .footer-links a:hover { color: #93c5fd; }
+
+    @media (max-width: 900px) {
+      .research-item,
+      .research-item:nth-child(even) {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .research-visual,
+      .research-visual-double {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-nav { display: none; }
+      .nav-toggle { display: flex; }
+      .site-nav.open {
+        display: flex; flex-direction: column; position: absolute;
+        top: 64px; left: 0; right: 0; background: var(--white);
+        padding: 20px; border-bottom: 1px solid var(--border); gap: 16px;
+      }
+      .header-icons { display: none; }
+      .page-hero h1 { font-size: 1.7rem; }
+      .research-visual,
+      .research-visual-double {
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Dr. Akif Rahim</a>
+      <nav class="site-nav" id="siteNav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.html#skills">Skills</a>
+        <a class="nav-link" href="index.html#publications">Publications</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <!-- <a class="nav-link" href="#skills">Skills</a> -->
+        <a class="nav-link active" href="research.html">Research</a>
+        <!-- <a href="research.html">Research & Portfolio</a> -->
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link" href="trainings.html">Trainings</a>
+        <!-- <a class="nav-link" href="#publications">Publications</a> -->
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-icons">
+        <a href="mailto:ak.rahim001@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=DB9Dlp8AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5v6"/><path d="M6 12.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Research &amp; Portfolio</h1>
+      <p>Selected projects in climate science, hydrology, drought monitoring, and machine learning applications for water resources.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- 1. Image LEFT -->
+      <article class="research-item">
+        <div class="research-visual">
+          <img src="assets/img/pdis.png" alt="Pakistan Drought Intelligent System (PDIS)" loading="lazy">
+        </div>
+        <div class="research-body">
+          <h3>Pakistan Drought Intelligent System (PDIS)</h3>
+          <p>Pakistan Drought Intelligent System for drought monitoring, early warning and decision support. Visit the live platform for maps, indices and forecasts.</p>
+          <p><a href="https://www.pakdrought.com" target="_blank" rel="noopener">Visit www.pakdrought.com →</a></p>
+          <div class="tags">
+            <span class="tag">Drought Monitoring</span>
+            <span class="tag">Early Warning</span>
+            <span class="tag">Decision Support</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Image RIGHT + TWO IMAGES -->
+      <article class="research-item">
+        <div class="research-visual-double">
+          <div class="double-wrapper">
+            <img src="assets/img/cgiar-nexus.png" alt="CGIAR Nexus Gains Initiative for Indus Basin" loading="lazy">
+          </div>
+          <div class="double-wrapper">
+            <img src="assets/img/cgiar-nexus1.png" alt="CGIAR Nexus Gains – second image" loading="lazy">
+          </div>
+        </div>
+        <div class="research-body">
+          <h3>CGIAR Nexus Gains – Indus Basin</h3>
+          <p>Downscaled high resolution climate projections to assess future water availability in the Indus Basin. Integrated climate projections with hydro economic models to assess future water availability and resource management. Analyzed climate extremes and their projected changes across the Indus Basin to assessed population exposure and vulnerability to extreme climate events across the basin.</p>
+          <div class="tags">
+            <span class="tag">Climate Projections</span>
+            <span class="tag">Indus Basin</span>
+            <span class="tag">Hydro-Economic Models</span>
+            <span class="tag">CGIAR</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Image LEFT -->
+      <article class="research-item">
+        <div class="research-visual">
+          <img src="assets/img/balochistan-water.png" alt="Assessment of Water Availability for Balochistan – FAO" loading="lazy">
+        </div>
+        <div class="research-body">
+          <h3>Assessment of Water Availability for Balochistan (FAO)</h3>
+          <p>Assessed water availability in selected watersheds of Balochistan under an FAO-funded project. Evaluated surface water availability across ungauged river basins and supported mapping of potential aquifer recharge zones.</p>
+          <div class="tags">
+            <span class="tag">Water Availability</span>
+            <span class="tag">Ungauged Basins</span>
+            <span class="tag">Aquifer Recharge</span>
+            <span class="tag">FAO</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Image RIGHT -->
+      <article class="research-item">
+        <div class="research-visual">
+          <img src="assets/img/flash-drought.png" alt="Resiliency of Ecosystem to Flash Drought" loading="lazy">
+        </div>
+        <div class="research-body">
+          <h3>Resiliency of Ecosystem to Flash Drought (Project funded by International Grant Agency (IGA) of Czech Republic)</h3>
+          <p>The ecosystem response to flash drought events was assessed based on gross primary production, revealing a response time of 20-30 days on average across Central Europe. The mid-layer (10-40 cm) and root zone (0-100 cm) of ecosystems exhibited high sensitivity to flash droughts, with croplands demonstrating lower resistance compared to forests. Among forest types, evergreen needle leaf forests exhibited higher resistance to flash droughts.</p>
+          <div class="tags">
+            <span class="tag">Flash Drought</span>
+            <span class="tag">Ecosystem Resilience</span>
+            <span class="tag">GPP</span>
+            <span class="tag">Central Europe</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Image LEFT -->
+      <article class="research-item">
+        <div class="research-visual">
+          <img src="assets/img/nhrcm-indus.png" alt="NHRCM High-resolution Climate Downscaling over Indus Basin" loading="lazy">
+        </div>
+        <div class="research-body">
+          <h3>Hydrostatic High resolution dynamics downscaling of high emission Climate Scenerio Over the Indus basin Funded by the Japan Meteorological Institude Tasukuba Japan.</h3>
+          <p>Pakistan is one of the most climate-vulnerable countries in the world, facing escalating risks from changing precipitation patterns, including catastrophic floods and prolonged droughts. Accurate high-resolution climate information is essential for disaster risk reduction, water resource management, and agricultural adaptation. This study evaluates the performance of the Non-Hydrostatic Regional Climate Model (NHRCM) developed by the Meteorological Research Institute of the Japan Meteorological Agency (MRI-JMA) at 5 km resolution for simulating rainfall characteristics over Pakistan's six topographical zones: Punjab, Sindh, Baluchistan, Khyber Pakhtunkhwa (KPK), Kashmir, and Gilgit Baltistan. The model's historical simulations (1980-1999) are compared against ERA5 reanalysis downscaled to 5 km, and future projections (2080-2099) under the high-emission SSP5-8.5 scenario are analyzed.</p>
+          <div class="tags">
+            <span class="tag">NHRCM</span>
+            <span class="tag">5 km Downscaling</span>
+            <span class="tag">Indus Basin</span>
+            <span class="tag">SSP5-8.5</span>
+            <span class="tag">MRI-JMA</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Image RIGHT -->
+      <article class="research-item">
+        <div class="research-visual">
+          <img src="assets/img/reservoir-ml.jpg" alt="Remote Sensing & Machine Learning for Reservoir Operation" loading="lazy">
+        </div>
+        <div class="research-body">
+          <h3>Leveraging of Remote sensing data & Machine learning for Reservoir Operation</h3>
+          <p>Developed transboundary reservoir operation models by integrating remote sensing data with machine learning to predict reservoir operations during the monsoon season. The system provides early estimates of dam releases, enabling timely flood forecasting, downstream evacuation, infrastructure protection, and improved water resources management, thereby enhancing disaster preparedness and reducing flood related risks.</p>
+          <div class="tags">
+            <span class="tag">Remote Sensing</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Reservoir Operations</span>
+            <span class="tag">Flood Forecasting</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">© <span id="year">2026</span> Dr. Akif Rahim. All Rights Reserved.</div>
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
+      <a href="https://pakdms.iwmi.org" target="_blank" rel="noopener">PakDMS</a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('siteNav');
+    if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
